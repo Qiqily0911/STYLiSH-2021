@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="Description"
+            content="a shopping website for various fashion and modern style clothes"
+        />
+        <title>STYLiSH thankyou</title>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="./css/style.css" />
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=G-JM7KNRVE32"
+        ></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag('js', new Date());
+
+            gtag('config', 'G-JM7KNRVE32');
+        </script>
+    </head>
+    <body>
+        <!-- nav start -->
+        <nav>
+            <div class="navbar">
+                <div id="logo">
+                    <!-- change <a> tag -->
+                    <a href="./index.html">
+                        <img src="./images/logo.png" alt="logo" />
+                    </a>
+                </div>
+                <div id="menu-left">
+                    <div>
+                        <a
+                            href="index.html?tag=women"
+                            id="tagWomen"
+                            class="category"
+                            >女裝</a
+                        >
+                    </div>
+                    <div>
+                        <a
+                            href="index.html?tag=men"
+                            id="tagMen"
+                            class="category"
+                            >男裝</a
+                        >
+                    </div>
+                    <div>
+                        <a
+                            href="index.html?tag=accessories"
+                            id="tagAccessories"
+                            class="category"
+                            >配件</a
+                        >
+                    </div>
+                </div>
+            </div>
+            <div id="menu-right">
+                <!-- search bar -->
+                <img
+                    id="search-icon-mobile"
+                    class="mobile-icon"
+                    src="./images/search.png"
+                    alt="search-icon"
+                />
+                <div id="search">
+                    <form action="index.html" method="GET">
+                        <!-- <img id="search-icon" src="./images/search.png" /> -->
+                        <input id="search-bar" type="text" name="tag" />
+                    </form>
+                </div>
+
+                <!-- shopping cart -->
+                <div class="menu-right-mobile">
+                    <div id="cart">
+                        <a href="./cart.html">
+                            <div id="item-num">0</div>
+                            <img
+                                class="web-icon"
+                                src="./images/cart-hover.png"
+                                alt="cart-icon"
+                            />
+                            <img
+                                class="mobile-icon"
+                                src="./images/cart-mobile.png"
+                                alt="cart-icon"
+                            />
+                        </a>
+                        <p>購物車</p>
+                    </div>
+                    <div id="profile">
+                        <a href="">
+                            <img
+                                class="web-icon"
+                                src="./images/member-hover.png"
+                                alt="member-icon" />
+                            <img
+                                class="mobile-icon"
+                                src="./images/member-mobile.png"
+                                alt="member-icon"
+                        /></a>
+                        <p>會員</p>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!-- nav end -->
+        <div class="deco-bar"></div>
+
+        <main>
+            <section>
+                <div class="contentBox">
+                    <h2>感謝您的購買 :)</h2>
+
+                    <div>本次訂單編號為 <span id="order-num"></span></div>
+                    <div>我們將儘速安排出貨</div>
+                    <div>
+                        <div class="btn">
+                            <a href="./index.html">
+                                <div>繼續購物</div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="link">
+                <!-- <form action=""><input type="text" /></form> -->
+                <div><a href="index.html">關於 Stylish</a></div>
+                <div><a href="index.html">服務條款</a></div>
+                <div><a href="index.html">隱私政策</a></div>
+                <div><a href="index.html">聯絡我們</a></div>
+                <div><a href="index.html">FAQ</a></div>
+            </div>
+            <div>
+                <div class="link-2">
+                    <div>
+                        <div><a href="index.html">關於 Stylish</a></div>
+                        <div><a href="index.html">服務條款</a></div>
+                        <div><a href="index.html">隱私政策</a></div>
+                    </div>
+                    <div>
+                        <div><a href="index.html">聯絡我們</a></div>
+                        <div><a href="index.html">FAQ</a></div>
+                    </div>
+                </div>
+                <div class="social-media">
+                    <img src="./images/line.png" alt="line-icon" />
+                    <img src="./images/twitter.png" alt="twitter-icon" />
+                    <img src="./images/facebook.png" alt="facebook-icon" />
+                </div>
+            </div>
+            <p>© 2020. All rights reserved.</p>
+        </footer>
+        <div class="bottom-block"></div>
+        <!-- <script src="./js/cart.js"></script> -->
+        <script src="./js/lib.js"></script>
+    </body>
+</html>

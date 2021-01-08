@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="Description"
+            content="a shopping website for various fashion and modern style clothes"
+        />
+        <title>STYLiSH 購物車</title>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="./css/style.css" />
+        <link rel="stylesheet" href="./css/cart.css" />
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=G-JM7KNRVE32"
+        ></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag('js', new Date());
+
+            gtag('config', 'G-JM7KNRVE32');
+        </script>
+    </head>
+    <body>
+        <!-- nav start -->
+        <nav>
+            <div class="navbar">
+                <div id="logo">
+                    <!-- change <a> tag -->
+                    <a href="./index.html">
+                        <img src="./images/logo.png" alt="logo" />
+                    </a>
+                </div>
+                <div id="menu-left">
+                    <div>
+                        <a
+                            href="index.html?tag=women"
+                            id="tagWomen"
+                            class="category"
+                            >女裝</a
+                        >
+                    </div>
+                    <div>
+                        <a
+                            href="index.html?tag=men"
+                            id="tagMen"
+                            class="category"
+                            >男裝</a
+                        >
+                    </div>
+                    <div>
+                        <a
+                            href="index.html?tag=accessories"
+                            id="tagAccessories"
+                            class="category"
+                            >配件</a
+                        >
+                    </div>
+                </div>
+            </div>
+            <div id="menu-right">
+                <!-- search bar -->
+                <img
+                    id="search-icon-mobile"
+                    class="mobile-icon"
+                    src="./images/search.png"
+                    alt="search-icon"
+                />
+                <div id="search">
+                    <form action="index.html" method="GET">
+                        <!-- <img id="search-icon" src="./images/search.png" /> -->
+                        <input id="search-bar" type="text" name="tag" />
+                    </form>
+                </div>
+
+                <!-- shopping cart -->
+                <div class="menu-right-mobile">
+                    <div id="cart">
+                        <a href="">
+                            <div id="item-num">0</div>
+                            <img
+                                class="web-icon"
+                                src="./images/cart-hover.png"
+                                alt="cart-icon"
+                            />
+                            <img
+                                class="mobile-icon"
+                                src="./images/cart-mobile.png"
+                                alt="cart-icon"
+                            />
+                        </a>
+                        <p>購物車</p>
+                    </div>
+                    <div id="profile">
+                        <div>
+                            <img
+                                class="web-icon defaultPic"
+                                src="./images/member-hover.png"
+                                alt="member-icon"
+                            />
+                            <img
+                                class="mobile-icon defaultPic"
+                                src="./images/member-mobile.png"
+                                alt="member-icon"
+                            />
+                            <p>會員</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!-- nav end -->
+        <div class="deco-bar"></div>
+        <main>
+            <section>
+                <div>
+                    <div class="shopping-list">
+                        <div class="product-top">
+                            <div></div>
+                            <div>數量</div>
+                            <div>單價</div>
+                            <div>小計</div>
+                            <div></div>
+                        </div>
+                        <div id="product-box"></div>
+                    </div>
+
+                    <div>
+                        <div class="shipping-payment">
+                            <div>
+                                <span>配送國家</span>
+                                <select name="shipping" id="shipping">
+                                    <option value="delivery">台灣或離島</option>
+                                </select>
+                            </div>
+                            <div>
+                                <span>付款方式</span>
+                                <select name="payment" id="payment">
+                                    <option value="credit_card">
+                                        信用卡付款
+                                    </option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="notice">
+                            ※ 提醒您： <br />
+                            ● 請填寫正確收件人資訊，避免包裹配送不達<br />
+                            ● 請填寫正確收件人姓名 ( 與證件相符 )，避免無法領取
+                        </div>
+                    </div>
+
+                    <div class="recipient">
+                        <form action="">
+                            <div class="title">收件資訊</div>
+
+                            <div class="line">
+                                <div class="text">收件人姓名</div>
+                                <input type="text" id="recipient-name" />
+                            </div>
+
+                            <div class="line">
+                                <div class="text">Email</div>
+                                <input type="email" id="recipient-email" />
+                            </div>
+
+                            <div class="line">
+                                <div class="text">手機號碼</div>
+                                <input type="tel" id="recipient-phone" />
+                            </div>
+
+                            <div class="line">
+                                <div class="text">收件地址</div>
+                                <input type="text" id="recipient-address" />
+                            </div>
+                            <div class="line">
+                                <div class="text">配送時間</div>
+
+                                <label for="arriveTime01">
+                                    <input
+                                        type="radio"
+                                        id="arriveTime01"
+                                        name="recipient-time"
+                                        value="morning"
+                                    />08:00 - 12:00</label
+                                >
+                                <label for="arriveTime02">
+                                    <input
+                                        type="radio"
+                                        id="arriveTime02"
+                                        name="recipient-time"
+                                        value="afternoon"
+                                    />1400 - 1800</label
+                                >
+
+                                <label for="arriveTime03">
+                                    <input
+                                        type="radio"
+                                        id="arriveTime03"
+                                        name="recipient-time"
+                                        value="anytime"
+                                        checked
+                                    />不指定</label
+                                >
+                            </div>
+
+                            <div></div>
+                        </form>
+                    </div>
+                    <div class="payment">
+                        <form action="">
+                            <div class="title">付款資訊</div>
+
+                            <div class="line">
+                                <div class="text">信用卡卡號</div>
+                                <div class="tpfield" id="card-number"></div>
+                            </div>
+                            <div class="line">
+                                <div class="text">有效期限</div>
+                                <div
+                                    class="tpfield"
+                                    id="card-expiration-date"
+                                ></div>
+                            </div>
+                            <div class="line">
+                                <div class="text">安全碼</div>
+                                <div class="tpfield" id="card-ccv"></div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="row">
+                        <div class="confirm">
+                            <div>
+                                <div class="money">
+                                    <div class="title">總金額</div>
+                                    <div>
+                                        <span>NT.</span>
+                                        <div id="total-price">0</div>
+                                    </div>
+                                </div>
+                                <div class="money">
+                                    <div class="title">運費</div>
+                                    <div>
+                                        <span>NT.</span>
+                                        <div id="shipping-price">60</div>
+                                    </div>
+                                </div>
+                                <div class="separater"></div>
+                                <div class="money">
+                                    <div class="title">應付金額</div>
+                                    <div>
+                                        <span>NT.</span>
+                                        <div id="pay-price">0</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="checkout">確認付款</div>
+                        </div>
+                    </div>
+                </div>
+                <div id="loading-img" class="d-none">
+                    <img src="./images/loading-1.svg" alt="loading" />
+                </div>
+            </section>
+        </main>
+        <footer>
+            <div class="link">
+                <!-- <form action=""><input type="text" /></form> -->
+                <div><a href="index.html">關於 Stylish</a></div>
+                <div><a href="index.html">服務條款</a></div>
+                <div><a href="index.html">隱私政策</a></div>
+                <div><a href="index.html">聯絡我們</a></div>
+                <div><a href="index.html">FAQ</a></div>
+            </div>
+            <div>
+                <div class="link-2">
+                    <div>
+                        <div><a href="index.html">關於 Stylish</a></div>
+                        <div><a href="index.html">服務條款</a></div>
+                        <div><a href="index.html">隱私政策</a></div>
+                    </div>
+                    <div>
+                        <div><a href="index.html">聯絡我們</a></div>
+                        <div><a href="index.html">FAQ</a></div>
+                    </div>
+                </div>
+                <div class="social-media">
+                    <img src="./images/line.png" alt="line-icon" />
+                    <img src="./images/twitter.png" alt="twitter-icon" />
+                    <img src="./images/facebook.png" alt="facebook-icon" />
+                </div>
+            </div>
+            <p>© 2020. All rights reserved.</p>
+        </footer>
+        <div class="bottom-block"></div>
+
+        <script src="https://js.tappaysdk.com/tpdirect/v5.4.0"></script>
+        <script>
+            TPDirect.setupSDK(
+                '12348',
+                'app_pa1pQcKoY22IlnSXq5m5WP5jFKzoRG58VEXpT7wU62ud7mMbDOGzCYIlzzLF',
+                'sandbox'
+            );
+        </script>
+        <script src="./js/lib.js"></script>
+        <script src="./js/tpdirect.js"></script>
+        <script src="./js/cart.js"></script>
+    </body>
+</html>
